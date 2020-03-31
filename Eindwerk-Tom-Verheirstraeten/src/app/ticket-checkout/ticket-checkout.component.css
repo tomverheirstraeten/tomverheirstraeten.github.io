@@ -1,0 +1,143 @@
+@keyframes shadowscale {
+  0% {
+    text-shadow: none
+  }
+
+  50% {
+    text-shadow: var(--textshadow)
+  }
+
+  100% {
+    text-shadow: none
+  }
+}
+
+
+#checkout {
+  margin-top: 4em;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dropdown {
+  cursor: default;
+  font-family: ailerons;
+  padding: 0.5em 1.5em;
+  color: var(--textcolor);
+  animation: shadowscale 15s infinite;
+  background: transparent;
+  border: none;
+  position: absolute;
+  text-align: center;
+
+
+}
+
+.dropdown-content {
+  cursor: pointer;
+  border-bottom: 0.2px solid var(--textcolor);
+
+
+
+}
+
+#currentformula:hover #dropdown {
+  display: block;
+}
+
+
+
+#emailPlace {
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+
+#emailPlace label {
+  font-family: "montserrat";
+  font-size: 80%;
+}
+
+#emailPlace input {
+  font-family: "montserrat";
+  background: transparent;
+  color: var(--textcolor);
+  border: none;
+  border-bottom: 0.5px solid var(--textcolor);
+  width: 20%;
+  font-size: 50%;
+  margin-top: 1em;
+}
+
+#emailPlace input::placeholder {
+
+  font-family: "montserrat";
+  color: var(--textcolor);
+  font-size: 90%;
+
+}
+
+#calculatePrice {
+  margin-top: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#selectamount {
+  font-family: "montserrat"
+}
+
+
+
+#calculatePrice div {
+  width: 15vw;
+}
+
+.active {
+  display: none
+}
+
+#counter {
+  font-family: ailerons;
+  font-size: 150%;
+  height: 30%;
+  width: 8vw !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+#calculator {
+  font-family: ailerons;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--textcolor);
+  line-height: 0.3em;
+}
+
+#calculator button {
+  width: 40%;
+  font-family: ailerons;
+  background: transparent;
+  border: 1px solid var(--textcolor);
+  border-radius: 20px;
+  color: var(--textcolor);
+}
+
+.addremove {
+  cursor: pointer;
+
+}

@@ -1,0 +1,19 @@
+<div id="title">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton">
+  <p id="pageTitle">{{title}}</p>
+</div>
+<div id="tickets">
+  <div id="ticketFormula" class="summary" *ngFor="let formule of formules,let i = index"
+    [class.active]="activeIndex === i" (click)="giveClassCurrent(i)">
+    <h3 class="formulaTitle">{{formule.name}}</h3>
+
+    <div class="formulaInfo">
+      <p>{{formule.price}}</p>
+      <ul>
+        <li *ngFor="let perk of formule.perks">{{perk}}</li>
+      </ul>
+      <button class="proceedbutton" (click)="goToCheckout(i)">proceed</button>
+    </div>
+  </div>
+
+</div>

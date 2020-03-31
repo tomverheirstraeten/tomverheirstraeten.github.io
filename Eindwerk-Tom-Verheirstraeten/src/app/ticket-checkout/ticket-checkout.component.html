@@ -1,0 +1,40 @@
+<div id="title">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/Tickets']">
+  <p id="pageTitle">{{title}}</p>
+</div>
+
+<div id="checkout">
+
+  <div id="dropdown" (mouseleave)="slideup()" (click)="slideup()">
+    <h3 id="currentformula" (mouseenter)='slidedown()'>{{currentformula}}</h3>
+    <h3 class="dropdown-content" *ngFor="let formule of formules,let i = index" (click)="setnewCurrent(i)"
+      [class.active]="activeIndex == i" (click)="giveClassCurrent(i)" [hidden]="show">
+      {{formule.name}}</h3>
+  </div>
+  <div id="emailPlace">
+    <label for="">E-mail:</label>
+    <input type="text" placeholder="E-mail:">
+  </div>
+  <div id="calculatePrice">
+    <div id="selectamount">
+      <p>amount:</p>
+      <div id="counter">
+        <p (click)="removeAmount()" class="addremove">-</p>
+        <p>{{amount}}</p>
+        <p (click)="addAmount()" class="addremove">+</p>
+      </div>
+    </div>
+    <div id="calculator">
+      <div id="price">
+        <p>price:</p>
+        <p>{{currentprice}}</p>
+      </div>
+      <p [style.visibility]="showdiscount ? 'visible' : 'hidden'">-10%</p>
+      <p id="total">total: {{total}}</p>
+      <button>pay</button>
+
+
+    </div>
+
+  </div>
+</div>

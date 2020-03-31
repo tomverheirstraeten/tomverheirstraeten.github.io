@@ -1,0 +1,42 @@
+header {
+  width: 100%;
+  height: 9vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+}
+
+#logo {
+  grid-row: 1;
+  grid-column: 6/ span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#logo img {
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  width: 60%;
+}
+
+
+
+#getTickets {
+
+  height: 100%;
+  width: 100%;
+  grid-column: 11/span 2;
+  display: grid;
+}
+
+p {
+  cursor: pointer;
+  font-size: 110%;
+  justify-self: end;
+  color: var(--textcolor);
+  font-family: ailerons;
+
+}

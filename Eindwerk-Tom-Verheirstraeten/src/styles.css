@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/aos/dist/aos.css';
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --textcolor: #3BDCE1;
+  --textshadow: 0px 0px 50px #41C6CA, 0px 0px 30px #41C6CA, 0px 0px 8px #41C6CA;
+}
+
+@font-face {
+  font-family: ailerons;
+  src: url(../src/assets/fonts/Ailerons-Typeface.otf);
+}
+
+
+
+body {
+  color: var(--textcolor);
+  background-color: #111111;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100%;
+  width: 90%;
+}
+
+#title {
+  display: grid;
+  grid-template-columns: 10% auto;
+  width: 30%;
+}
+
+#backbutton {
+  align-self: center;
+  grid-column: 1;
+  cursor: pointer;
+}
+
+#pageTitle {
+  grid-column: 2;
+  padding: 0;
+  line-height: 0;
+  font-family: ailerons;
+  font-size: 200%;
+  text-shadow: var(--textshadow);
+  cursor: default;
+}

@@ -1,0 +1,77 @@
+@keyframes show {
+  100% {
+    opacity: 1;
+  }
+}
+
+#tickets {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.summary {
+  cursor: pointer;
+  opacity: 0.27;
+  margin-top: 20vh;
+  border: 1px solid var(--textcolor);
+  width: calc(16.6667% - 10px);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.7s ease-out;
+}
+
+.summary button {
+  opacity: 0;
+  border: 0.5px solid var(--textcolor);
+  background: transparent;
+  font-family: "montserrat";
+  font-size: 10px;
+  color: var(--textcolor);
+  padding: 0.5em 2em;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+  width: 50%;
+  text-shadow: var(--textshadow);
+  cursor: default;
+}
+
+.active button {
+  animation: show 0.2s 0.5s forwards;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.formulaTitle {
+  font-family: ailerons;
+
+}
+
+.formulaInfo {
+
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "montserrat";
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  padding: 0;
+}
+
+ul li {
+  justify-self: center;
+}

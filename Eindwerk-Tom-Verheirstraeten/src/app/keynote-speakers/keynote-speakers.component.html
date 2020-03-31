@@ -1,0 +1,44 @@
+<div id="title">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton">
+  <p id="pageTitle">{{title}}</p>
+</div>
+
+
+
+
+<div *ngFor="let speaker of speakers,let i = index;">
+  <div div *ngIf="i%2 === 0" class="speakerTemplate">
+    <div class="speakerPicture">
+      <div class="frameOutline" data-aos="fade-down" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">
+      </div>
+      <div data-aos="fade-up-right" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200"><img
+          [src]="speaker.img" alt=""></div>
+
+    </div>
+    <div class="speakerInfo">
+      <h3 data-aos="fade-down-left" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">{{speaker.name}}
+        <img src="../../assets/images/backbutton_small.png" alt="" [routerLink]="['/speakerDetails',i]"></h3>
+      <article data-aos="fade-right" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">
+        <p>{{speaker.text}}</p>
+      </article>
+    </div>
+  </div>
+  <div div *ngIf="i%2 === 1" class="speakerTemplate alternate">
+    <div class="speakerInfo">
+      <h3 data-aos="fade-down-right" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">{{speaker.name}}
+        <img src="../../assets/images/backbutton_small.png" alt="" [routerLink]="['/speakerDetails',i]"></h3>
+      <article data-aos="fade-up" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">
+        <p>{{speaker.text}}</p>
+      </article>
+    </div>
+    <div class="speakerPicture">
+      <div class="frameOutlinealter" data-aos="fade-down-left" data-aos-anchor-placement="middle-bottom"
+        data-aos-duration="1200"></div>
+      <div data-aos="fade-up-left" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200"><img
+          [src]="speaker.img" alt=""></div>
+    </div>
+  </div>
+
+
+
+</div>

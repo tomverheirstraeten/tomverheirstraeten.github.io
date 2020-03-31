@@ -1,0 +1,84 @@
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sidescroll {
+  from {
+    right: 87vw;
+  }
+
+  to {
+    right: -110vw
+  }
+}
+
+#centerContent {
+  position: absolute;
+  top: 9vh;
+  width: 90%;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#start {
+  font-size: 130%;
+  margin-top: 45vh;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+div {
+  margin: auto;
+}
+
+#info {
+  margin-top: 15vh;
+  display: grid;
+  font-size: 110%;
+}
+
+p {
+  margin: 0 auto;
+  font-family: ailerons;
+}
+
+h3 {
+  padding: 0;
+  margin: 0 auto;
+  font-family: ailerons;
+}
+
+h2 {
+  cursor: default;
+  position: absolute;
+  font-family: ailerons;
+  font-size: 2000%;
+  opacity: 0.05;
+  animation: sidescroll 25s infinite;
+  animation-timing-function: linear;
+  transition: all 2 ease-in-out;
+}
+
+
+
+#second {
+  top: -40vh;
+  right: 87vw;
+
+  animation: sidescroll 25s infinite;
+  animation-timing-function: linear;
+  animation-delay: 12.5s;
+}
