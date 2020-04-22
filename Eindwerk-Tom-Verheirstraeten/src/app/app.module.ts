@@ -12,13 +12,18 @@ import { TicketCheckoutComponent } from './ticket-checkout/ticket-checkout.compo
 import { FooterComponent } from './footer/footer.component';
 import { KeynoteSpeakersComponent } from './keynote-speakers/keynote-speakers.component';
 import { SpeakerDetailsComponent } from './speaker-details/speaker-details.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ProgramComponent } from './program/program.component';
 
 const routes: Routes = [
   { path: 'Tickets', component: TicketsComponent },
   { path: '', component: LandingComponent },
   { path: 'ticketcheckout/:index', component: TicketCheckoutComponent },
   { path: 'keynote', component: KeynoteSpeakersComponent },
-  { path: 'speakerDetails/:id', component: SpeakerDetailsComponent }
+  { path: 'speakerDetails/:id', component: SpeakerDetailsComponent },
+  { path: 'navigation', component: NavigationComponent },
+  { path: 'Program', component: ProgramComponent }
 ];
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ const routes: Routes = [
     TicketCheckoutComponent,
     FooterComponent,
     KeynoteSpeakersComponent,
-    SpeakerDetailsComponent
+    SpeakerDetailsComponent,
+    SponsorsComponent,
+    NavigationComponent,
+    ProgramComponent
   ],
   imports: [
     BrowserModule,

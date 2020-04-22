@@ -3,4 +3,44 @@
   <p id="pageTitle">{{title}}</p>
 </div>
 
-<div>{{artists[index].name}}</div>
+<div class="backgroundName">
+  <div>{{artists[index].name}}</div>
+  <div id="second">{{artists[index].lastname}}</div>
+</div>
+
+<div id="work" class="info-section" data-aos="fade-right" data-aos-anchor-placement="middle-bottom"
+  data-aos-duration="1200">
+  <h2>work</h2>
+  <div id="carousel">
+    <img [src]="work.url" alt="" *ngFor="let work of artists[index].work,let i = index"
+      [class.active]="activeIndex == i" (click)="giveCarouselIndex(i)" [class.leftActive]="activeIndex == i+1"
+      [class.rightActive]="activeIndex == i-1" [class.secondleftActive]="activeIndex == i+2"
+      [class.secondrightActive]="activeIndex == i-2">
+  </div>
+  <div class="dots">
+    <div class="dot" *ngFor="let dot of artists[index].work,let i = index" [class.active]="activeIndex == i"
+      (click)="giveCarouselIndex(i)"></div>
+  </div>
+</div>
+
+<div id="About" class="info-section" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom"
+  data-aos-duration="1200">
+  <h2>about</h2>
+  <div id="speakerTemplate">
+    <div class="speaker-picture">
+      <div class="caption">{{artists[index].caption}}</div>
+      <div class="frameOutline"></div>
+      <div class="image"> <img [src]="artists[index].img" alt=""></div>
+    </div>
+    <div id="speakerInfo">
+      <h3>{{artists[index].name}} {{artists[index].lastname}}</h3>
+      <article>{{artists[index].info}}</article>
+      <div class="socials">
+        <div *ngFor="let social of artists[index].socials">
+          <div class="url"><a [href]="social.url" target="blank"><i [class]="social.icon"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

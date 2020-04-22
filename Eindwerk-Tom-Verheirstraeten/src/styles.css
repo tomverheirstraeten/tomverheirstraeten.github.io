@@ -19,7 +19,9 @@
 
 body {
   color: var(--textcolor);
-  background-color: #111111;
+  background-image: url("../src/assets/images/Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
@@ -46,4 +48,11 @@ body {
   font-size: 200%;
   text-shadow: var(--textshadow);
   cursor: default;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
 }

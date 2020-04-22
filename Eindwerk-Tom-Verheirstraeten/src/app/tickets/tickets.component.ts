@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import * as info from '../../assets/jsons/dots&pix.json';
 
 @Component({
   selector: 'app-tickets',
@@ -11,31 +12,7 @@ export class TicketsComponent implements OnInit {
   activeIndex = 0;
   title = 'Tickets';
 
-  formules = [
-    {
-      name: 'Student/Teacher',
-      price: 'free',
-      perks: []
-    },
-    {
-      name: 'Early bird',
-      price: '€45',
-      perks: [
-        'Untill July'
-      ]
-    },
-    {
-      name: 'standard',
-      price: '€90',
-      perks: ["-10% from 6 tickets"]
-    },
-    {
-      name: 'all-in',
-      price: '€250',
-      perks: ['free food', 'free drinks', 'light sponsor']
-    },
-
-  ]
+  formules;
 
 
   giveClassCurrent(index) {
@@ -43,11 +20,12 @@ export class TicketsComponent implements OnInit {
   }
 
   goToCheckout(index) {
-    this.router.navigate(["/ticketcheckout", index]);
+    this.router.navigate(['/ticketcheckout', index]);
   }
 
 
   ngOnInit(): void {
+    this.formules = info.default.tickets;
   }
 
 

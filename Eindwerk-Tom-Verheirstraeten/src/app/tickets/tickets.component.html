@@ -1,5 +1,5 @@
 <div id="title">
-  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/navigation']">
   <p id="pageTitle">{{title}}</p>
 </div>
 <div id="tickets">
@@ -8,7 +8,7 @@
     <h3 class="formulaTitle">{{formule.name}}</h3>
 
     <div class="formulaInfo">
-      <p>{{formule.price}}</p>
+      <p>€ {{formule.price}}</p>
       <ul>
         <li *ngFor="let perk of formule.perks">{{perk}}</li>
       </ul>

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
 import AOS from 'aos';
+import { ParticlesConfig } from './particles-config';
 
-
-
+declare let particlesJS: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,13 +12,18 @@ import AOS from 'aos';
 export class AppComponent {
   constructor(private router: Router) { }
 
-  title = 'Eindwerk-Tom-Verheirstraeten';
   ngOnInit(): void {
     AOS.init({ mirror: true });
     this.router.navigate(['']);
+    particlesJS('particles-js', ParticlesConfig, function () { });
   }
-
 }
+
+
+
+
+
+
 
 
 

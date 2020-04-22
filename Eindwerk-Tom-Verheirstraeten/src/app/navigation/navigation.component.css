@@ -1,0 +1,23 @@
+#klikker {
+  position: absolute;
+  top: 40vh;
+  left: 30vw;
+  width: 40vw;
+  height: 20vh;
+  cursor: pointer;
+}
+
+#previousarrow {
+  position: absolute;
+  top: 50vh;
+  left: 15%;
+  cursor: pointer;
+}
+
+#nextarrow {
+  position: absolute;
+  top: 50vh;
+  right: 15%;
+  transform: rotateZ(180deg);
+  cursor: pointer;
+}

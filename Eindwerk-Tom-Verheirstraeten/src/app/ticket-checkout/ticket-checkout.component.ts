@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgModule } from '@angular/core';
+import * as info from '../../assets/jsons/dots&pix.json';
 
 @Component({
   selector: 'app-ticket-checkout',
@@ -18,36 +19,13 @@ export class TicketCheckoutComponent implements OnInit {
   amount = 0;
   showdiscount = false;
 
-  formules = [
-    {
-      name: 'Student/Teacher',
-      price: '0',
-      perks: []
-    },
-    {
-      name: 'Early bird',
-      price: '45',
-      perks: [
-        'Untill July'
-      ]
-    },
-    {
-      name: 'standard',
-      price: '90',
-      perks: []
-    },
-    {
-      name: 'all-in',
-      price: '250',
-      perks: ['free food', 'free drinks', 'light sponsor']
-    },
-
-  ]
+  formules;
 
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.index = this.router.snapshot.paramMap.get("index");
+    this.formules = info.default.tickets;
     for (let i in this.formules) {
       if (i == this.index) {
         this.currentformula = this.formules[i].name;

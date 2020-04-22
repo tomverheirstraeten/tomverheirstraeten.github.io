@@ -1,11 +1,7 @@
 <div id="title">
-  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/navigation']">
   <p id="pageTitle">{{title}}</p>
 </div>
-
-
-
-
 <div *ngFor="let speaker of speakers,let i = index;">
   <div div *ngIf="i%2 === 0" class="speakerTemplate">
     <div class="speakerPicture">
@@ -17,18 +13,20 @@
     </div>
     <div class="speakerInfo">
       <h3 data-aos="fade-down-left" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">{{speaker.name}}
+        {{speaker.lastname}}
         <img src="../../assets/images/backbutton_small.png" alt="" [routerLink]="['/speakerDetails',i]"></h3>
       <article data-aos="fade-right" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">
-        <p>{{speaker.text}}</p>
+        <p>{{speaker.info}}</p>
       </article>
     </div>
   </div>
   <div div *ngIf="i%2 === 1" class="speakerTemplate alternate">
     <div class="speakerInfo">
       <h3 data-aos="fade-down-right" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">{{speaker.name}}
+        {{speaker.lastname}}
         <img src="../../assets/images/backbutton_small.png" alt="" [routerLink]="['/speakerDetails',i]"></h3>
       <article data-aos="fade-up" data-aos-anchor-placement="middle-bottom" data-aos-duration="1200">
-        <p>{{speaker.text}}</p>
+        <p>{{speaker.info}}</p>
       </article>
     </div>
     <div class="speakerPicture">
