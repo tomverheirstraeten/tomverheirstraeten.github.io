@@ -1,0 +1,55 @@
+.vertical {
+  position: absolute;
+  height: 40%;
+  background-color: var(--textcolor);
+  width: 0.2%;
+  left: 49.9%;
+}
+
+.speaker {
+  width: 100%;
+  font-family: ailerons;
+  font-size: 4vw;
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+
+}
+
+.speaker div {
+  font-size: 50% !important;
+}
+
+.alternate {
+
+  text-align: right !important;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: var(--textcolor);
+  left: 49.7%;
+
+}
+
+.line {
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  border-radius: 50px;
+  background-color: var(--textcolor);
+  left: 5%;
+}
+
+.linealternate {
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  border-radius: 50px;
+  background-color: var(--textcolor);
+  left: 55%;
+}

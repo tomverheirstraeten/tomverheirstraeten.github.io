@@ -72,6 +72,56 @@
       "perks": ["free food", "free drinks", "light sponsor"]
     }
   ],
+  "timetable": [{
+      "name": "Koffie",
+      "time": "9:30"
+
+    }, {
+      "name": "Dries Depoortere",
+      "time": "10:00 - 11:00"
+
+    }, {
+      "name": "Es Devlin",
+      "time": "11:00 - 12:00"
+
+    }, {
+      "name": "Break",
+      "time": ""
+
+    }, {
+      "name": "Neil Harbisson",
+      "time": "13:00 - 14:00"
+
+    }, {
+      "name": "Stefan Sagmeister",
+      "time": "14:00 - 15:00"
+
+    }, {
+      "name": "break",
+      "time": ""
+
+    },
+    {
+      "name": "Neil Mendoza",
+      "time": "15:30 - 16:30"
+
+    },
+    {
+      "name": "Daan Roosegaarden",
+      "time": "16:30 - 17:30"
+
+    },
+    {
+      "name": "break",
+      "time": "17:30 - 18:00"
+
+    },
+    {
+      "name": "seth godin",
+      "time": "18:00 - 18:30"
+
+    }
+  ],
   "resolveJsonModule": true,
   "esModuleInterop": true
 }

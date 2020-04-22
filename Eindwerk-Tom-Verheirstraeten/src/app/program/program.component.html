@@ -1,7 +1,20 @@
 <div id="title">
-  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/navigation']">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/navigation/0']">
   <p id="pageTitle">{{title}}</p>
 </div>
-<div id="carousel">
-  <div class="speaker"></div>
+
+
+
+<div *ngFor="let item of program,let i = index">
+  <div class="vertical"></div>
+  <div *ngIf="i%2 === 0" class="speaker" data-aos="fade-left" data-aos-anchor-placement="middle-bottom"
+    data-aos-duration="1200">{{item.name}} <div>{{item.time}}</div>
+    <div class="dot"></div>
+    <div class="line"></div>
+  </div>
+  <div *ngIf="i%2 === 1" class="speaker alternate" data-aos="fade-right" data-aos-anchor-placement="middle-bottom"
+    data-aos-duration="1200">{{item.name}}<div>{{item.time}}</div>
+    <div class="dot"></div>
+    <div class="linealternate"></div>
+  </div>
 </div>

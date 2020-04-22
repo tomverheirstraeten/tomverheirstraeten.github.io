@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'ticketcheckout/:index', component: TicketCheckoutComponent },
   { path: 'keynote', component: KeynoteSpeakersComponent },
   { path: 'speakerDetails/:id', component: SpeakerDetailsComponent },
-  { path: 'navigation', component: NavigationComponent },
+  { path: 'navigation/:id', component: NavigationComponent },
   { path: 'Program', component: ProgramComponent }
 ];
 @NgModule({

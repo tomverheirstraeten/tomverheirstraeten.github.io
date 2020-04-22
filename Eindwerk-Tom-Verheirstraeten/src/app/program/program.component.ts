@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as info from '../../assets/jsons/dots&pix.json';
 
 @Component({
   selector: 'app-program',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgramComponent implements OnInit {
   title = "program"
+  program;
+  activeIndex = 1;
   constructor() { }
 
   ngOnInit(): void {
+    this.program = info.default.timetable;
+    console.log(this.program);
   }
 
 }

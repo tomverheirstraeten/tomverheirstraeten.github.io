@@ -16,6 +16,6 @@ export class KeynoteSpeakersComponent implements OnInit {
   ngOnInit(): void {
     console.log(info.default.artists);
     this.speakers = info.default.artists;
-    console.log(this.speakers)
+    console.log(this.speakers);
   }
 }

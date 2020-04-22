@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import * as  THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { PointLight, AmbientLight } from 'three';
@@ -25,32 +25,34 @@ export class NavigationComponent implements OnInit {
   turn: boolean;
   raycaster = new THREE.Raycaster();
   intersects: [];
-  NavigationPosition = 0;
+  NavigationPosition = -1;
   moveleft = false;
   moveright = false;
   counter = 0;
   speed = 0.35;
   leftarrow = true;
   rightarrow = true;
+  ismoving = false;
 
 
 
 
   @ViewChild('render') el: ElementRef;
-  constructor(private router: Router) {
+  constructor(private router: Router, private activatedrouter: ActivatedRoute) {
     this.scene = new THREE.Scene();
+    this.NavigationPosition = parseInt(this.activatedrouter.snapshot.paramMap.get('id'));
+
   }
 
   ngOnInit(): void {
     this.camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight);
+
   }
 
   ngAfterViewInit() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.el.nativeElement.appendChild(this.renderer.domElement);
     this.loader.load('../../assets/3Dobjects/meshes.gltf', this.handle_load)
-    // this.renderer.domElement.addEventListener("Click", this.onclick);
-    // this.el.nativeElement.querySelector('canvas').addEventListener('click', this.onclick.bind(this));
   }
 
   handle_load = (gltf) => {
@@ -78,12 +80,43 @@ export class NavigationComponent implements OnInit {
     this.practicalmesh.position.z = -5;
     this.programmesh.position.z = -5;
     //verschuiven van links naar rechts
-    this.ticketmesh.position.x += -4;
-    this.keynotemesh.position.x += 0;
-    this.keynotemesh.position.y += 0.5;
-    this.partnersmesh.position.x += 2;
-    this.practicalmesh.position.x += 4;
-    this.programmesh.position.x += -2;
+    if (this.NavigationPosition == -1) {
+      this.ticketmesh.position.x += 3;
+      this.keynotemesh.position.x += 7;
+      this.keynotemesh.position.y += 0.5;
+      this.partnersmesh.position.x += 9;
+      this.practicalmesh.position.x += 11;
+      this.programmesh.position.x += 5;
+
+    } else if (this.NavigationPosition == 0) {
+      this.ticketmesh.position.x += -4;
+      this.keynotemesh.position.x += 0;
+      this.keynotemesh.position.y += 0.5;
+      this.partnersmesh.position.x += 2;
+      this.practicalmesh.position.x += 4;
+      this.programmesh.position.x += -2;
+    } else if (this.NavigationPosition == 1) {
+      this.ticketmesh.position.x += -11;
+      this.keynotemesh.position.x += -7;
+      this.keynotemesh.position.y += 0.5;
+      this.partnersmesh.position.x += -5;
+      this.practicalmesh.position.x += -3;
+      this.programmesh.position.x += -9;
+    } else if (this.NavigationPosition == 2) {
+      this.ticketmesh.position.x += -18;
+      this.keynotemesh.position.x += -14;
+      this.keynotemesh.position.y += 0.5;
+      this.partnersmesh.position.x += -12;
+      this.practicalmesh.position.x += -10;
+      this.programmesh.position.x += -16;
+    } else if (this.NavigationPosition == 3) {
+      this.ticketmesh.position.x += -25;
+      this.keynotemesh.position.x += -21;
+      this.keynotemesh.position.y += 0.5;
+      this.partnersmesh.position.x += -19;
+      this.practicalmesh.position.x += -17;
+      this.programmesh.position.x += -23;
+    }
     //rotate om x-as
     this.ticketmesh.rotation.x = 2;
     this.keynotemesh.rotation.x = 2;
@@ -99,6 +132,7 @@ export class NavigationComponent implements OnInit {
     this.partnersmesh.material = material;
     this.practicalmesh.material = material;
     this.programmesh.material = material;
+    this.checkarrows();
     this.render();
   }
 
@@ -136,6 +170,7 @@ export class NavigationComponent implements OnInit {
       } else {
         this.counter = 0;
         this.moveleft = false;
+        this.ismoving = false;
       }
 
     } else if (this.moveright) {
@@ -149,37 +184,14 @@ export class NavigationComponent implements OnInit {
       } else {
         this.counter = 0;
         this.moveright = false;
+        this.ismoving = false;
       }
 
     }
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(this.render);
   }
-  // onclick = (e) => {
-  //   var mouse = new THREE.Vector2();
-  //   mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-  //   mouse.y = - (e.clientY / window.innerHeight) * 2 + 1;
-  //   this.raycaster.setFromCamera(mouse, this.camera);
-  //   var intersects = this.raycaster.intersectObjects(this.scene.children, true); //array
-  //   console.log(intersects);
-  //   if (intersects.length > 0) {
 
-  //     if (intersects[0].object.name == "Tickets") {
-  //       this.router.navigate(["/Tickets"]);
-  //     } else if (intersects[0].object.name == "Keynote") {
-  //       this.router.navigate(["/keynote"]);
-  //     }
-  //     // else if (intersects[0].object.name == "Partners") {
-  //     //   this.router.navigate(["/Tickets"]);
-  //     // }else if (intersects[0].object.name == "Practical") {
-  //     //   this.router.navigate(["/Tickets"]);
-  //     // }else if (intersects[0].object.name == "Program") {
-  //     //   this.router.navigate(["/Tickets"]);
-  //     // }
-
-  //   }
-
-  // }
 
   travel = () => {
     if (this.NavigationPosition == -1) {
@@ -192,13 +204,16 @@ export class NavigationComponent implements OnInit {
 
   }
 
-
   setMoveleft = () => {
+    this.ismoving = true;
     this.moveleft = true;
     this.NavigationPosition -= 1;
     this.checkarrows();
+
   }
+
   setMoveright = () => {
+    this.ismoving = true;
     this.moveright = true;
     this.NavigationPosition += 1;
     this.checkarrows();
@@ -213,9 +228,6 @@ export class NavigationComponent implements OnInit {
       this.leftarrow = true;
       this.rightarrow = true;
     }
+
   }
-
-
-
-
 }
