@@ -1,0 +1,26 @@
+.category {
+  width: 100%;
+  margin: 10% 0;
+  /* background-color: red; */
+}
+
+.categorytitle {
+  height: 50px;
+  text-align: center;
+  font-family: ailerons;
+  font-size: 2em;
+  border-bottom: 1px solid var(--textcolor);
+  margin-bottom: 5%;
+}
+
+.imagecontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.imagecontainer img {
+  width: 15%;
+}

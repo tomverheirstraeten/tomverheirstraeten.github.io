@@ -122,6 +122,38 @@
 
     }
   ],
-  "resolveJsonModule": true,
-  "esModuleInterop": true
+  "partners": [{
+      "title": "golden",
+      "sponsors": [
+        "../../assets/images/Sponsors/footer-logo-bozar.png",
+        "../../assets/images/Sponsors/logoEHB.png",
+        "../../assets/images/Sponsors/FinalLogo-White.png"
+      ]
+
+    },
+    {
+      "title": "silver",
+      "sponsors": [
+        "../../assets/images/Sponsors/kvk.png",
+        "../../assets/images/Sponsors/logoBXL.png",
+        "../../assets/images/Sponsors/IMEC.png"
+      ]
+    },
+    {
+      "title": "bronze",
+      "sponsors": [
+        "../../assets/images/Sponsors/showpad.png",
+        "../../assets/images/Sponsors/meet.png",
+        "../../assets/images/Sponsors/leeuw.png"
+      ]
+
+    },
+    {
+      "title": "light",
+      "sponsors": [
+
+      ]
+
+    }
+  ]
 }

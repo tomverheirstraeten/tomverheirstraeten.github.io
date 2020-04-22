@@ -18,7 +18,7 @@ export class SpeakerDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.index = this.router.snapshot.paramMap.get('id');
     console.log(this.index);
-    this.artists = info.default.artists;
+    this.artists = info.artists;
   }
 
   giveCarouselIndex(index) {

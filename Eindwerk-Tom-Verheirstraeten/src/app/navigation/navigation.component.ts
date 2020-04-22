@@ -200,6 +200,8 @@ export class NavigationComponent implements OnInit {
       this.router.navigate(["/Program"]);
     } else if (this.NavigationPosition == 1) {
       this.router.navigate(["/keynote"]);
+    } else if (this.NavigationPosition == 2) {
+      this.router.navigate(["/Sponsors"]);
     }
 
   }

@@ -1,1 +1,11 @@
-<p>sponsors works!</p>
+<div id="title">
+  <img src="../../assets/images/backbutton_small.png" alt="backbutton" id="backbutton" [routerLink]="['/navigation/2']">
+  <p id="pageTitle">{{title}}</p>
+</div>
+
+
+<div *ngFor="let category of sponsors" class="category" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom"
+  data-aos-duration="1200" data-aos-mirror="false">
+  <div class="categorytitle">{{category.title}}</div>
+  <div class="imagecontainer"><img [src]="img" alt="" *ngFor="let img of category.sponsors"></div>
+</div>

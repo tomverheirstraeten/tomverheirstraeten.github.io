@@ -14,8 +14,8 @@ export class KeynoteSpeakersComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(info.default.artists);
-    this.speakers = info.default.artists;
+    console.log(info.artists);
+    this.speakers = info.artists;
     console.log(this.speakers);
   }
 }

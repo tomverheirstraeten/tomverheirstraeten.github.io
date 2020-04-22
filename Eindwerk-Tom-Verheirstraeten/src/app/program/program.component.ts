@@ -13,7 +13,7 @@ export class ProgramComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.program = info.default.timetable;
+    this.program = info.timetable;
     console.log(this.program);
   }
 

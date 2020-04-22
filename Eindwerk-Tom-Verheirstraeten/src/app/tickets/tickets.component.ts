@@ -25,7 +25,7 @@ export class TicketsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.formules = info.default.tickets;
+    this.formules = info.tickets;
   }
 
 

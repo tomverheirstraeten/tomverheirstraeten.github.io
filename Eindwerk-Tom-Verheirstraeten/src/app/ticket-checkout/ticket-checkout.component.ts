@@ -25,7 +25,7 @@ export class TicketCheckoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.index = this.router.snapshot.paramMap.get("index");
-    this.formules = info.default.tickets;
+    this.formules = info.tickets;
     for (let i in this.formules) {
       if (i == this.index) {
         this.currentformula = this.formules[i].name;
