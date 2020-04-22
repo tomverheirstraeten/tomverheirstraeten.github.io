@@ -52,7 +52,7 @@ export class NavigationComponent implements OnInit {
   ngAfterViewInit() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.el.nativeElement.appendChild(this.renderer.domElement);
-    this.loader.load('../../assets/3Dobjects/meshes.gltf', this.handle_load)
+    this.loader.load('assets/3Dobjects/meshes.gltf', this.handle_load)
   }
 
   handle_load = (gltf) => {

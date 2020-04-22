@@ -5,7 +5,7 @@
     "caption": "artist",
     "info": "Dries Depoorter is a Belgium artist that handles themes as privacy, artificial intelligence, surveillance & social media. Depoorter creates interactive installations, apps, games.\n\nDepoorter exhibited internationally at the Barbican, MUTEK Festival, Art Basel, Bozar, Para Site Hong Kong, Mozilla – The Glass Room San Francisco, HEK Basel, WIRED, IDFA Doclab, Mundaneum, FOMU, Ars Electronica, Athens Digital Art Festival, Art Soutterain, STRP festival, Heidelberger Kunstverein.",
     "extendedinfo": "",
-    "img": "../../assets/images/DriesDetail.jpg",
+    "img": "assets/images/DriesDetail.jpg",
     "socials": [{
         "icon": "",
         "url": "https://www.instagram.com/driesdepoorter/?hl=nl"
@@ -22,17 +22,17 @@
       }
     ],
     "work": [{
-      "url": "../../assets/images/work/Wdries.png"
+      "url": "assets/images/work/Wdries.png"
     }, {
-      "url": "../../assets/images/work/Wdries2.png"
+      "url": "assets/images/work/Wdries2.png"
     }, {
-      "url": "../../assets/images/work/Wdries3.png"
+      "url": "assets/images/work/Wdries3.png"
     }, {
-      "url": "../../assets/images/work/Wdries4.png"
+      "url": "assets/images/work/Wdries4.png"
     }, {
-      "url": "../../assets/images/work/Wdries5.png"
+      "url": "assets/images/work/Wdries5.png"
     }, {
-      "url": "../../assets/images/work/Wdries6.png"
+      "url": "assets/images/work/Wdries6.png"
     }]
 
   }, {
@@ -125,26 +125,26 @@
   "partners": [{
       "title": "golden",
       "sponsors": [
-        "../../assets/images/Sponsors/footer-logo-bozar.png",
-        "../../assets/images/Sponsors/logoEHB.png",
-        "../../assets/images/Sponsors/FinalLogo-White.png"
+        "assets/images/Sponsors/footer-logo-bozar.png",
+        "assets/images/Sponsors/logoEHB.png",
+        "assets/images/Sponsors/FinalLogo-White.png"
       ]
 
     },
     {
       "title": "silver",
       "sponsors": [
-        "../../assets/images/Sponsors/kvk.png",
-        "../../assets/images/Sponsors/logoBXL.png",
-        "../../assets/images/Sponsors/IMEC.png"
+        "assets/images/Sponsors/kvk.png",
+        "assets/images/Sponsors/logoBXL.png",
+        "assets/images/Sponsors/IMEC.png"
       ]
     },
     {
       "title": "bronze",
       "sponsors": [
-        "../../assets/images/Sponsors/showpad.png",
-        "../../assets/images/Sponsors/meet.png",
-        "../../assets/images/Sponsors/leeuw.png"
+        "assets/images/Sponsors/showpad.png",
+        "assets/images/Sponsors/meet.png",
+        "assets/images/Sponsors/leeuw.png"
       ]
 
     },
